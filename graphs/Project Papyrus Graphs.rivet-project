@@ -1,0 +1,1604 @@
+version: 4
+data:
+  attachedData:
+    trivet:
+      testSuites: []
+      version: 1
+  graphs:
+    3YXkE7WWz_vbpzF4_i7Rt:
+      metadata:
+        description: The “Example Only” prompt was used and the “Example Input” and
+          “Example Output” were in the same language as the user’s input and
+          English, respectively.
+        id: 3YXkE7WWz_vbpzF4_i7Rt
+        name: "Runs/Run: GPT 3.5 Turbo 1106 - Example-based Prompt - 002"
+      nodes:
+        '[5L7QiHBEYPJ3F7DZI9Y8b]:object "Object (Split / Max=24)"':
+          data:
+            jsonTemplate: |-
+              {
+                "example_id": "{{example_id}}",
+                "prediction": "{{prediction}}"
+              }
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - output->"Array" PN9flWAXbQTYEP5KFd6iJ/input1
+          splitRunMax: 24
+          visualData: 1361.505083240636/919.4712124184169/341.1085663956442/102//
+        '[PN9flWAXbQTYEP5KFd6iJ]:array "Array"':
+          data:
+            flatten: true
+            flattenDeep: false
+          outgoingConnections:
+            - output->"Graph Output" ZXx1EmA4hVR8MyRJEW7Ys/value
+          visualData: 1633.017382479244/647.0222079128811/230/101//
+        '[RGZKKw3PXUpYJ40H-cM-I]:text "GPT-3.5-Turbo-1106 Model ID"':
+          data:
+            text: gpt-3.5-turbo-1106
+          outgoingConnections:
+            - output->"Subgraph (Split / Max=24)" fbw3QSwoTs5gVNiG2JGYk/model_id
+          visualData: 24.752200707627985/687.3784823095747/398.0773240663649/90/var(--node-color-2)/var(--node-color-2)
+        '[TskiaPS0EXh31On8cuKgb]:subGraph "Subgraph"':
+          data:
+            graphId: 70bn-PjccM5TA0DNPxu1s
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - example_file_paths->"Subgraph (Split / Max=24)"
+              ooCbzfA_h-PyOz-JYAo_U/file_path
+          visualData: 88.34807706629937/223.88859164447956/330/84/var(--node-color-1)/var(--grey-darkish)
+        '[ZXx1EmA4hVR8MyRJEW7Ys]:graphOutput "Graph Output"':
+          data:
+            dataType: object[]
+            id: results
+          visualData: 1693.9948225560972/267.46299040851966/330/100/var(--node-color-7)/var(--node-color-7)
+        '[fbw3QSwoTs5gVNiG2JGYk]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: 3wDYKd-IQNvtClNLnaGnh
+            inputData:
+              model_id:
+                type: string
+                value: ""
+              seed:
+                type: number
+                value: 20240128
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - example_id->"Object (Split / Max=24)"
+              5L7QiHBEYPJ3F7DZI9Y8b/example_id
+            - prediction->"Object (Split / Max=24)"
+              5L7QiHBEYPJ3F7DZI9Y8b/prediction
+          splitRunMax: 24
+          visualData: 757.8732229556351/870.5136908210345/447.11443484946267/103/var(--node-color-1)/var(--node-color-1)
+        '[gDPS0KBMj-bQwHwXWErpv]:text "GPT-4-0125-Preview Model ID"':
+          data:
+            text: gpt-4-0125-preview
+          visualData: -4.467457670983592/862.7360467713952/395.1804166592856/91/var(--node-color-2)/var(--node-color-2)
+        '[lwi-dnMLkb7d6LlnZK7Ri]:text "Default Example Output"':
+          data:
+            text: "{'title': 'CHA Social Needs Questionnaire', 'language': 'this must be the
+              original language in which the input was written (must be in
+              lowercase)', 'questions': [{'text': 'In the last 12 months, did
+              you worry your food would run out before you got money to buy
+              more?', 'choices': [{'id': 1, 'label': 'Never', 'state':
+              'unselected'}, {'id': 2, 'label': 'Sometimes', 'state':
+              'unselected'}, {'id': 3, 'label': 'Often', 'state':
+              'unselected'}]}, {'text': \"In the last 12 months, the food we
+              bought didn't last and we didn't have money to get more.\",
+              'choices': [{'id': 4, 'label': 'Never', 'state': 'unselected'},
+              {'id': 5, 'label': 'Sometimes', 'state': 'unselected'}, {'id': 6,
+              'label': 'Often', 'state': 'unselected'}]}, {'text': 'In the last
+              12 months, has the electric, gas or oil company threatened to shut
+              off services in your home?', 'choices': [{'id': 7, 'label': 'No',
+              'state': 'unselected'}, {'id': 8, 'label': 'Yes', 'state':
+              'unselected'}, {'id': 9, 'label': 'Already shut off', 'state':
+              'unselected'}]}, {'text': 'In the last 12 months, have you or your
+              family had trouble getting transportation to medical
+              appointments?', 'choices': [{'id': 10, 'label': 'No', 'state':
+              'unselected'}, {'id': 11, 'label': 'Yes', 'state':
+              'unselected'}]}, {'text': 'What is your living situation today?',
+              'choices': [{'id': 12, 'label': 'I have a steady place to live.',
+              'state': 'unselected'}, {'id': 13, 'label': 'I have a place to
+              live today, but I am at risk of losing my housing.', 'state':
+              'unselected'}, {'id': 14, 'label': 'I am temporarily staying with
+              others, in a hotel, or a shelter.', 'state': 'unselected'}, {'id':
+              15, 'label': 'I am living outside, in a car, abandoned building,
+              or bus/train station.', 'state': 'unselected'}]}, {'text': 'Do you
+              have access to the internet at home? (Select all that apply)',
+              'choices': [{'id': 16, 'label': 'Yes, on a computer', 'state':
+              'unselected'}, {'id': 17, 'label': 'Yes, on my phone', 'state':
+              'unselected'}, {'id': 18, 'label': 'No', 'state': 'unselected'}]},
+              {'text': 'In the last 12 months, have you experienced violence at
+              home or in your relationships? [Ambulatory Only]', 'choices':
+              [{'id': 19, 'label': 'No', 'state': 'unselected'}, {'id': 20,
+              'label': 'Yes', 'state': 'unselected'}, {'id': 21, 'label':
+              'Prefer not to say', 'state': 'unselected'}]}, {'text': 'Would you
+              like a CHA care team member to reach out to help you with the
+              needs you checked off above?', 'choices': [{'id': 22, 'label':
+              'Yes', 'state': 'unselected'}, {'id': 23, 'label': 'No', 'state':
+              'unselected'}]}, {'text': 'Can we refer you to free or low-cost
+              community programs (like food pantries) by sharing your name,
+              phone, and address so they can reach you?', 'choices': [{'id': 24,
+              'label': 'Yes', 'state': 'unselected'}, {'id': 25, 'label': 'No',
+              'state': 'unselected'}]}, {'text': 'Declined the questionnaire?',
+              'choices': [{'id': 26, 'label': 'I do not want to answer these
+              questions.', 'state': 'unselected'}]}]}"
+          outgoingConnections:
+            - output->"Subgraph (Split / Max=24)"
+              npDL1UU62KuxBejlv4r2y/example_output
+          visualData: 85.1801273589466/75.02891401571648/330/106/var(--node-color-2)/var(--node-color-2)
+        '[npDL1UU62KuxBejlv4r2y]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: jn1nyOBUnaIyk5oicrO-W
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - system_prompt->"Subgraph (Split / Max=24)"
+              fbw3QSwoTs5gVNiG2JGYk/system_prompt
+            - user_prompt->"Subgraph (Split / Max=24)"
+              fbw3QSwoTs5gVNiG2JGYk/user_prompt
+          splitRunMax: 24
+          visualData: 744.3318559310258/258.89974462905616/480.14671134546506/104/var(--node-color-1)/var(--node-color-1)
+        '[ooCbzfA_h-PyOz-JYAo_U]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: tBzVbqIp1-fWi2T7UKrrw
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - example_id->"Subgraph (Split / Max=24)"
+              fbw3QSwoTs5gVNiG2JGYk/example_id
+            - scanned_input->"Subgraph (Split / Max=24)"
+              npDL1UU62KuxBejlv4r2y/scanned_input
+            - tagged_example_input->"Subgraph (Split / Max=24)"
+              npDL1UU62KuxBejlv4r2y/example_input
+          splitRunMax: 24
+          visualData: 9.090913911648698/402.9589550716141/495.1237222035234/88/var(--node-color-1)/var(--grey-darkish)
+        '[xgEfzPaijVeTOg6tLdS6j]:number "Seed"':
+          data:
+            round: false
+            roundTo: 0
+            value: 20240128
+          outgoingConnections:
+            - value->"Subgraph (Split / Max=24)" fbw3QSwoTs5gVNiG2JGYk/seed
+          visualData: 111.01022657449987/1033.2991140907845/230/53/var(--node-color-2)/var(--node-color-2)
+    3wDYKd-IQNvtClNLnaGnh:
+      metadata:
+        description: ""
+        id: 3wDYKd-IQNvtClNLnaGnh
+        name: Model Inferencing Graph [Variants]
+      nodes:
+        '[5T6vFiSNjiwtPa9Gl2Y_4]:extractJson "Extract JSON"':
+          outgoingConnections:
+            - output->"Graph Output" diZCgGzMBP6eNaLiaF37n/value
+          visualData: 1082.6719893999125/326.4397242089624/280/36//
+        '[BxasvpWfyUjoTWCTVSqEJ]:graphInput "Graph Input"':
+          data:
+            dataType: number
+            defaultValue: "20230127"
+            id: seed
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"LLM Inferencing - [Default]" UqGq3w06p7epne_7388cm/seed
+          visualData: 93.36583355809314/712.1774892111893/330/42/var(--node-color-1)/var(--node-color-1)
+        '[C72RSOZIFG5vV4sWgCnkZ]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: system_prompt
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"LLM Inferencing - [Default]"
+              UqGq3w06p7epne_7388cm/systemPrompt
+          visualData: 125.06117587376801/-10.91560862369019/330/43/var(--node-color-1)/var(--node-color-1)
+        '[SOQsNbijXyUH3Q38qTo0H]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: example_id
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Graph Output" rkYyPSIXfLcm-WHeLOL5y/value
+          visualData: 520.6715807550484/-42.58061078043907/330/47/var(--node-color-1)/var(--node-color-1)
+        '[UqGq3w06p7epne_7388cm]:chat "LLM Inferencing - [Default]"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 4096
+            model: gpt-3.5-turbo-1106
+            parallelFunctionCalling: true
+            presencePenalty: 0
+            responseFormat: json
+            stop: ""
+            temperature: 0
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: true
+            usePresencePenaltyInput: false
+            useResponseFormatInput: true
+            useSeedInput: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Extract JSON" 5T6vFiSNjiwtPa9Gl2Y_4/input
+          variants:
+            - data:
+                cache: false
+                enableFunctionUse: false
+                frequencyPenalty: 0
+                headers: []
+                maxTokens: 4096
+                model: gpt-3.5-turbo-1106
+                parallelFunctionCalling: true
+                presencePenalty: 0
+                responseFormat: json
+                stop: "[FANETO]"
+                temperature: 0
+                top_p: 1
+                useAsGraphPartialOutput: true
+                useFrequencyPenaltyInput: false
+                useMaxTokensInput: false
+                useModelInput: true
+                usePresencePenaltyInput: false
+                useResponseFormatInput: true
+                useSeedInput: true
+                useStop: false
+                useStopInput: false
+                useTemperatureInput: false
+                useTopP: false
+                useTopPInput: false
+                useUseTopPInput: false
+                useUserInput: false
+              id: "[FANETO] Stop Token"
+            - data:
+                cache: false
+                enableFunctionUse: false
+                frequencyPenalty: 0
+                headers: []
+                maxTokens: 4096
+                model: gpt-3.5-turbo-1106
+                parallelFunctionCalling: true
+                presencePenalty: 0
+                responseFormat: json
+                stop: ""
+                temperature: 0
+                top_p: 1
+                useAsGraphPartialOutput: true
+                useFrequencyPenaltyInput: false
+                useMaxTokensInput: false
+                useModelInput: true
+                usePresencePenaltyInput: false
+                useResponseFormatInput: true
+                useSeedInput: true
+                useStop: false
+                useStopInput: false
+                useTemperatureInput: false
+                useTopP: false
+                useTopPInput: false
+                useUseTopPInput: false
+                useUserInput: false
+              id: Default
+          visualData: 589.996830428413/319.13000374944465/380.5802414660666/54/var(--node-color-2)/var(--node-color-2)
+        '[ZAh6Xx93_qAcBd__jAPE0]:graphInput "Graph Input"':
+          data:
+            dataType: chat-message
+            id: user_prompt
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"LLM Inferencing - [Default]" UqGq3w06p7epne_7388cm/prompt
+          visualData: 71.96376085903646/479.2082909367546/330/30/var(--node-color-1)/var(--node-color-1)
+        '[diZCgGzMBP6eNaLiaF37n]:graphOutput "Graph Output"':
+          data:
+            dataType: object
+            id: prediction
+          visualData: 1494.280499086297/194.58617123146146/330/51/var(--node-color-7)/var(--node-color-7)
+        '[rkYyPSIXfLcm-WHeLOL5y]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: example_id
+          visualData: 1499.412343774392/18.894015657139516/330/52/var(--node-color-7)/var(--node-color-7)
+        '[zMpPOxZJjLUZMUsNrakNZ]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: model_id
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"LLM Inferencing - [Default]" UqGq3w06p7epne_7388cm/model
+          visualData: 73.05442550684444/233.95054412345257/330/41/var(--node-color-1)/var(--node-color-1)
+    70bn-PjccM5TA0DNPxu1s:
+      metadata:
+        description: ""
+        id: 70bn-PjccM5TA0DNPxu1s
+        name: Get List of Paths to Experiments Graph
+      nodes:
+        '[4M7G7bdpAkDfFA3odd_oA]:filter "Filter"':
+          outgoingConnections:
+            - filtered->"Graph Output" jTWidecdLKuJ8xyuAE9sO/value
+          visualData: 759.2936162864158/-568.9401851220349/205/40//
+        '[921YEgUCmXTqdtSXr9m9M]:extractRegex "Use Regex to Detect JSON Files"':
+          data:
+            errorOnFailed: false
+            regex: ^.*\/?[\w,\s-]+\.[jJ][sS][oO][nN]$
+            useRegexInput: false
+          isSplitRun: true
+          outgoingConnections:
+            - succeeded->"Filter" 4M7G7bdpAkDfFA3odd_oA/include
+          splitRunMax: 50
+          visualData: 176.35499443653381/-340.08280024763684/444.92192268924214/43//
+        '[JSqwpf9k4GN-Zo9lI22Ml]:readDirectory "Read Directory"':
+          data:
+            filterGlobs: []
+            ignores: []
+            includeDirectories: false
+            path: /Users/oekekezie/Documents/Writing/Project
+              Papyrus/development/dataset/experiments
+            recursive: false
+            relative: false
+            useFilterGlobsInput: false
+            useIgnoresInput: false
+            useIncludeDirectoriesInput: false
+            usePathInput: false
+            useRecursiveInput: false
+            useRelativeInput: false
+          outgoingConnections:
+            - paths->"Filter" 4M7G7bdpAkDfFA3odd_oA/array
+            - paths->"Use Regex to Detect JSON Files" 921YEgUCmXTqdtSXr9m9M/input
+          visualData: -98.72951491089904/-808.1176142344193/436.2990927948574/42//
+        '[jTWidecdLKuJ8xyuAE9sO]:graphOutput "Graph Output"':
+          data:
+            dataType: string[]
+            id: example_file_paths
+          visualData: 1038.18734736273/-373.6633638937592/330/39/var(--node-color-1)/var(--node-color-1)
+    CbADyG8hP6PJdUrXKGjdH:
+      metadata:
+        description: The “Example Only” prompt was used and the “Example Input” and
+          “Example Output” were in English.
+        id: CbADyG8hP6PJdUrXKGjdH
+        name: "Runs/Run: GPT 4 0125 - Example-based Prompt - 001"
+      nodes:
+        '[0eMK5y-HQNp5hHXIsMPep]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: tBzVbqIp1-fWi2T7UKrrw
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - english_tagged_example_input->"Subgraph (Split / Max=24)"
+              7k2re3UoOmzHbt6B3AJl4/example_input
+            - example_id->"Subgraph (Split / Max=24)"
+              VEgEozUBYnBf1swtEqYEY/example_id
+            - scanned_input->"Subgraph (Split / Max=24)"
+              7k2re3UoOmzHbt6B3AJl4/scanned_input
+          splitRunMax: 24
+          visualData: 9.090913911648698/402.9589550716141/495.1237222035234/88/var(--node-color-1)/var(--grey-darkish)
+        '[21sdBzBODx6kSqRC502fg]:text "GPT-3.5-Turbo-1106 Model ID"':
+          data:
+            text: gpt-3.5-turbo-1106
+          visualData: 24.752200707627985/687.3784823095747/398.0773240663649/90/var(--node-color-2)/var(--node-color-2)
+        '[7k2re3UoOmzHbt6B3AJl4]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: jn1nyOBUnaIyk5oicrO-W
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - system_prompt->"Subgraph (Split / Max=24)"
+              VEgEozUBYnBf1swtEqYEY/system_prompt
+            - user_prompt->"Subgraph (Split / Max=24)"
+              VEgEozUBYnBf1swtEqYEY/user_prompt
+          splitRunMax: 24
+          visualData: 744.3318559310258/258.89974462905616/480.14671134546506/104/var(--node-color-1)/var(--node-color-1)
+        '[ILLV4Ybkn7jFAdgTy34-6]:text "Default Example Output"':
+          data:
+            text: "{'title': 'CHA Social Needs Questionnaire', 'language': 'this must be the
+              original language in which the input was written (must be in
+              lowercase)', 'questions': [{'text': 'In the last 12 months, did
+              you worry your food would run out before you got money to buy
+              more?', 'choices': [{'id': 1, 'label': 'Never', 'state':
+              'unselected'}, {'id': 2, 'label': 'Sometimes', 'state':
+              'unselected'}, {'id': 3, 'label': 'Often', 'state':
+              'unselected'}]}, {'text': \"In the last 12 months, the food we
+              bought didn't last and we didn't have money to get more.\",
+              'choices': [{'id': 4, 'label': 'Never', 'state': 'unselected'},
+              {'id': 5, 'label': 'Sometimes', 'state': 'unselected'}, {'id': 6,
+              'label': 'Often', 'state': 'unselected'}]}, {'text': 'In the last
+              12 months, has the electric, gas or oil company threatened to shut
+              off services in your home?', 'choices': [{'id': 7, 'label': 'No',
+              'state': 'unselected'}, {'id': 8, 'label': 'Yes', 'state':
+              'unselected'}, {'id': 9, 'label': 'Already shut off', 'state':
+              'unselected'}]}, {'text': 'In the last 12 months, have you or your
+              family had trouble getting transportation to medical
+              appointments?', 'choices': [{'id': 10, 'label': 'No', 'state':
+              'unselected'}, {'id': 11, 'label': 'Yes', 'state':
+              'unselected'}]}, {'text': 'What is your living situation today?',
+              'choices': [{'id': 12, 'label': 'I have a steady place to live.',
+              'state': 'unselected'}, {'id': 13, 'label': 'I have a place to
+              live today, but I am at risk of losing my housing.', 'state':
+              'unselected'}, {'id': 14, 'label': 'I am temporarily staying with
+              others, in a hotel, or a shelter.', 'state': 'unselected'}, {'id':
+              15, 'label': 'I am living outside, in a car, abandoned building,
+              or bus/train station.', 'state': 'unselected'}]}, {'text': 'Do you
+              have access to the internet at home? (Select all that apply)',
+              'choices': [{'id': 16, 'label': 'Yes, on a computer', 'state':
+              'unselected'}, {'id': 17, 'label': 'Yes, on my phone', 'state':
+              'unselected'}, {'id': 18, 'label': 'No', 'state': 'unselected'}]},
+              {'text': 'In the last 12 months, have you experienced violence at
+              home or in your relationships? [Ambulatory Only]', 'choices':
+              [{'id': 19, 'label': 'No', 'state': 'unselected'}, {'id': 20,
+              'label': 'Yes', 'state': 'unselected'}, {'id': 21, 'label':
+              'Prefer not to say', 'state': 'unselected'}]}, {'text': 'Would you
+              like a CHA care team member to reach out to help you with the
+              needs you checked off above?', 'choices': [{'id': 22, 'label':
+              'Yes', 'state': 'unselected'}, {'id': 23, 'label': 'No', 'state':
+              'unselected'}]}, {'text': 'Can we refer you to free or low-cost
+              community programs (like food pantries) by sharing your name,
+              phone, and address so they can reach you?', 'choices': [{'id': 24,
+              'label': 'Yes', 'state': 'unselected'}, {'id': 25, 'label': 'No',
+              'state': 'unselected'}]}, {'text': 'Declined the questionnaire?',
+              'choices': [{'id': 26, 'label': 'I do not want to answer these
+              questions.', 'state': 'unselected'}]}]}"
+          outgoingConnections:
+            - output->"Subgraph (Split / Max=24)"
+              7k2re3UoOmzHbt6B3AJl4/example_output
+          visualData: 85.1801273589466/75.02891401571648/330/106/var(--node-color-2)/var(--node-color-2)
+        '[SVjaElbjgexTCIBxmDz9S]:object "Object (Split / Max=24)"':
+          data:
+            jsonTemplate: |-
+              {
+                "example_id": "{{example_id}}",
+                "prediction": "{{prediction}}"
+              }
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - output->"Array" VGcckKwskxwnOy0-rIpL0/input1
+          splitRunMax: 24
+          visualData: 1361.505083240636/919.4712124184169/341.1085663956442/102//
+        '[VEgEozUBYnBf1swtEqYEY]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: 3wDYKd-IQNvtClNLnaGnh
+            inputData:
+              model_id:
+                type: string
+                value: ""
+              seed:
+                type: number
+                value: 20240128
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - example_id->"Object (Split / Max=24)"
+              SVjaElbjgexTCIBxmDz9S/example_id
+            - prediction->"Object (Split / Max=24)"
+              SVjaElbjgexTCIBxmDz9S/prediction
+          splitRunMax: 24
+          visualData: 757.8732229556351/870.5136908210345/447.11443484946267/103/var(--node-color-1)/var(--node-color-1)
+        '[VGcckKwskxwnOy0-rIpL0]:array "Array"':
+          data:
+            flatten: true
+            flattenDeep: false
+          outgoingConnections:
+            - output->"Graph Output" jNEwWEyppCWvB7Ux00Di8/value
+          visualData: 1633.017382479244/647.0222079128811/230/101//
+        '[jNEwWEyppCWvB7Ux00Di8]:graphOutput "Graph Output"':
+          data:
+            dataType: object[]
+            id: results
+          visualData: 1693.9948225560972/267.46299040851966/330/100/var(--node-color-7)/var(--node-color-7)
+        '[vOg3-ZMQcUZkjYJ687G6q]:text "GPT-4-0125-Preview Model ID"':
+          data:
+            text: gpt-4-0125-preview
+          outgoingConnections:
+            - output->"Subgraph (Split / Max=24)" VEgEozUBYnBf1swtEqYEY/model_id
+          visualData: -4.467457670983592/862.7360467713952/395.1804166592856/91/var(--node-color-2)/var(--node-color-2)
+        '[xolWq0CjtjJ-SrJsxtKw3]:number "Seed"':
+          data:
+            round: false
+            roundTo: 0
+            value: 20240128
+          outgoingConnections:
+            - value->"Subgraph (Split / Max=24)" VEgEozUBYnBf1swtEqYEY/seed
+          visualData: 111.01022657449987/1033.2991140907845/230/53/var(--node-color-2)/var(--node-color-2)
+        '[zun3x2O5-PcVnO3cSloNC]:subGraph "Subgraph"':
+          data:
+            graphId: 70bn-PjccM5TA0DNPxu1s
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - example_file_paths->"Subgraph (Split / Max=24)"
+              0eMK5y-HQNp5hHXIsMPep/file_path
+          visualData: 88.34807706629937/223.88859164447956/330/84/var(--node-color-1)/var(--grey-darkish)
+    PLacU-htDuwT9LGj835sJ:
+      metadata:
+        description: ""
+        id: PLacU-htDuwT9LGj835sJ
+        name: "Runs/Run: GPT 4 0125 - Example-based Prompt - 002"
+      nodes:
+        '[0uUEtWpjTlb6a2LlHMsT1]:text "Default Example Output"':
+          data:
+            text: "{'title': 'CHA Social Needs Questionnaire', 'language': 'this must be the
+              original language in which the input was written (must be in
+              lowercase)', 'questions': [{'text': 'In the last 12 months, did
+              you worry your food would run out before you got money to buy
+              more?', 'choices': [{'id': 1, 'label': 'Never', 'state':
+              'unselected'}, {'id': 2, 'label': 'Sometimes', 'state':
+              'unselected'}, {'id': 3, 'label': 'Often', 'state':
+              'unselected'}]}, {'text': \"In the last 12 months, the food we
+              bought didn't last and we didn't have money to get more.\",
+              'choices': [{'id': 4, 'label': 'Never', 'state': 'unselected'},
+              {'id': 5, 'label': 'Sometimes', 'state': 'unselected'}, {'id': 6,
+              'label': 'Often', 'state': 'unselected'}]}, {'text': 'In the last
+              12 months, has the electric, gas or oil company threatened to shut
+              off services in your home?', 'choices': [{'id': 7, 'label': 'No',
+              'state': 'unselected'}, {'id': 8, 'label': 'Yes', 'state':
+              'unselected'}, {'id': 9, 'label': 'Already shut off', 'state':
+              'unselected'}]}, {'text': 'In the last 12 months, have you or your
+              family had trouble getting transportation to medical
+              appointments?', 'choices': [{'id': 10, 'label': 'No', 'state':
+              'unselected'}, {'id': 11, 'label': 'Yes', 'state':
+              'unselected'}]}, {'text': 'What is your living situation today?',
+              'choices': [{'id': 12, 'label': 'I have a steady place to live.',
+              'state': 'unselected'}, {'id': 13, 'label': 'I have a place to
+              live today, but I am at risk of losing my housing.', 'state':
+              'unselected'}, {'id': 14, 'label': 'I am temporarily staying with
+              others, in a hotel, or a shelter.', 'state': 'unselected'}, {'id':
+              15, 'label': 'I am living outside, in a car, abandoned building,
+              or bus/train station.', 'state': 'unselected'}]}, {'text': 'Do you
+              have access to the internet at home? (Select all that apply)',
+              'choices': [{'id': 16, 'label': 'Yes, on a computer', 'state':
+              'unselected'}, {'id': 17, 'label': 'Yes, on my phone', 'state':
+              'unselected'}, {'id': 18, 'label': 'No', 'state': 'unselected'}]},
+              {'text': 'In the last 12 months, have you experienced violence at
+              home or in your relationships? [Ambulatory Only]', 'choices':
+              [{'id': 19, 'label': 'No', 'state': 'unselected'}, {'id': 20,
+              'label': 'Yes', 'state': 'unselected'}, {'id': 21, 'label':
+              'Prefer not to say', 'state': 'unselected'}]}, {'text': 'Would you
+              like a CHA care team member to reach out to help you with the
+              needs you checked off above?', 'choices': [{'id': 22, 'label':
+              'Yes', 'state': 'unselected'}, {'id': 23, 'label': 'No', 'state':
+              'unselected'}]}, {'text': 'Can we refer you to free or low-cost
+              community programs (like food pantries) by sharing your name,
+              phone, and address so they can reach you?', 'choices': [{'id': 24,
+              'label': 'Yes', 'state': 'unselected'}, {'id': 25, 'label': 'No',
+              'state': 'unselected'}]}, {'text': 'Declined the questionnaire?',
+              'choices': [{'id': 26, 'label': 'I do not want to answer these
+              questions.', 'state': 'unselected'}]}]}"
+          outgoingConnections:
+            - output->"Subgraph (Split / Max=24)"
+              5PYWUe1g_3u1ivKkXwK8f/example_output
+          visualData: 85.1801273589466/75.02891401571648/330/106/var(--node-color-2)/var(--node-color-2)
+        '[5PYWUe1g_3u1ivKkXwK8f]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: jn1nyOBUnaIyk5oicrO-W
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - system_prompt->"Subgraph (Split / Max=24)"
+              QEnKenmZo6MD1yvz0F02o/system_prompt
+            - user_prompt->"Subgraph (Split / Max=24)"
+              QEnKenmZo6MD1yvz0F02o/user_prompt
+          splitRunMax: 24
+          visualData: 744.3318559310258/258.89974462905616/480.14671134546506/104/var(--node-color-1)/var(--node-color-1)
+        '[Bxah8fTgFiF8Vbla952nV]:graphOutput "Graph Output"':
+          data:
+            dataType: object[]
+            id: results
+          visualData: 1693.9948225560972/267.46299040851966/330/100/var(--node-color-7)/var(--node-color-7)
+        '[CvCLgXzGBSmq6QvQCcMEb]:array "Array"':
+          data:
+            flatten: true
+            flattenDeep: false
+          outgoingConnections:
+            - output->"Graph Output" Bxah8fTgFiF8Vbla952nV/value
+          visualData: 1633.017382479244/647.0222079128811/230/101//
+        '[JqwgEl7zW7FVQnGeTYLyY]:text "GPT-3.5-Turbo-1106 Model ID"':
+          data:
+            text: gpt-3.5-turbo-1106
+          visualData: -143.25036077910528/695.674905099043/398.0773240663649/108/var(--node-color-2)/var(--node-color-2)
+        '[LABmlxtyl79XB1-LhUT_t]:object "Object (Split / Max=24)"':
+          data:
+            jsonTemplate: |-
+              {
+                "example_id": "{{example_id}}",
+                "prediction": "{{prediction}}"
+              }
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - output->"Array" CvCLgXzGBSmq6QvQCcMEb/input1
+          splitRunMax: 24
+          visualData: 1361.505083240636/919.4712124184169/341.1085663956442/102//
+        '[QEnKenmZo6MD1yvz0F02o]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: 3wDYKd-IQNvtClNLnaGnh
+            inputData:
+              model_id:
+                type: string
+                value: ""
+              seed:
+                type: number
+                value: 20240128
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - example_id->"Object (Split / Max=24)"
+              LABmlxtyl79XB1-LhUT_t/example_id
+            - prediction->"Object (Split / Max=24)"
+              LABmlxtyl79XB1-LhUT_t/prediction
+          splitRunMax: 24
+          visualData: 757.8732229556351/870.5136908210345/447.11443484946267/103/var(--node-color-1)/var(--node-color-1)
+        '[XtjXNITyo_K_epepw6Gz1]:number "Seed"':
+          data:
+            round: false
+            roundTo: 0
+            value: 20240128
+          outgoingConnections:
+            - value->"Subgraph (Split / Max=24)" QEnKenmZo6MD1yvz0F02o/seed
+          visualData: 330.86543049541007/1176.4124072091129/230/107/var(--node-color-2)/var(--node-color-2)
+        '[ZJwCczi8ajcT9cI5nxdJ-]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: tBzVbqIp1-fWi2T7UKrrw
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - example_id->"Subgraph (Split / Max=24)"
+              QEnKenmZo6MD1yvz0F02o/example_id
+            - scanned_input->"Subgraph (Split / Max=24)"
+              5PYWUe1g_3u1ivKkXwK8f/scanned_input
+            - tagged_example_input->"Subgraph (Split / Max=24)"
+              5PYWUe1g_3u1ivKkXwK8f/example_input
+          splitRunMax: 24
+          visualData: 9.090913911648698/402.9589550716141/495.1237222035234/88/var(--node-color-1)/var(--grey-darkish)
+        '[__odlSnY8rWIXDWBiiaHa]:text "GPT-4-0125-Preview Model ID"':
+          data:
+            text: gpt-4-0125-preview
+          visualData: -157.96478059293364/1009.714023631945/395.1804166592856/113/var(--node-color-2)/var(--node-color-2)
+        '[cmpRvVtJ8M9U_Tq3fW_HM]:text "GPT-3.5-Turbo-0125 Model ID"':
+          data:
+            text: gpt-3.5-turbo-0125
+          outgoingConnections:
+            - output->"Subgraph (Split / Max=24)" QEnKenmZo6MD1yvz0F02o/model_id
+          visualData: -189.1777150904801/853.922764815975/398.0773240663649/112/var(--node-color-2)/var(--node-color-2)
+        '[j13YGK99RdduUvw4MZs2D]:subGraph "Subgraph"':
+          data:
+            graphId: 70bn-PjccM5TA0DNPxu1s
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - example_file_paths->"Subgraph (Split / Max=24)"
+              ZJwCczi8ajcT9cI5nxdJ-/file_path
+          visualData: 88.34807706629937/223.88859164447956/330/84/var(--node-color-1)/var(--grey-darkish)
+    QX4jae7BHpud9Fc8rT2tP:
+      metadata:
+        description: This used the “Hand Crafted” prompt.
+        id: QX4jae7BHpud9Fc8rT2tP
+        name: "Runs/Run: GPT 3.5 Turbo 1106 - Hand Crafted Prompt - 001"
+      nodes:
+        '[-WE86QulATBl3fU0hxdPf]:number "Seed"':
+          data:
+            round: false
+            roundTo: 0
+            value: 20240128
+          outgoingConnections:
+            - value->"Subgraph (Split / Max=24)" XNLlL-j_yCqt_xibKMmSV/seed
+          visualData: 111.01022657449987/1033.2991140907845/230/53/var(--node-color-2)/var(--node-color-2)
+        '[3FSzBufpaUJuIU1C7I7v_]:text "GPT-4-0125-Preview Model ID"':
+          data:
+            text: gpt-4-0125-preview
+          visualData: -4.467457670983592/862.7360467713952/395.1804166592856/91/var(--node-color-2)/var(--node-color-2)
+        '[A_CcXR-Oh3DAcrYuKtapv]:text "Default Example Output"':
+          data:
+            text: "{'title': 'CHA Social Needs Questionnaire', 'language': 'this must be the
+              original language in which the input was written (must be in
+              lowercase)', 'questions': [{'text': 'In the last 12 months, did
+              you worry your food would run out before you got money to buy
+              more?', 'choices': [{'id': 1, 'label': 'Never', 'state':
+              'unselected'}, {'id': 2, 'label': 'Sometimes', 'state':
+              'unselected'}, {'id': 3, 'label': 'Often', 'state':
+              'unselected'}]}, {'text': \"In the last 12 months, the food we
+              bought didn't last and we didn't have money to get more.\",
+              'choices': [{'id': 4, 'label': 'Never', 'state': 'unselected'},
+              {'id': 5, 'label': 'Sometimes', 'state': 'unselected'}, {'id': 6,
+              'label': 'Often', 'state': 'unselected'}]}, {'text': 'In the last
+              12 months, has the electric, gas or oil company threatened to shut
+              off services in your home?', 'choices': [{'id': 7, 'label': 'No',
+              'state': 'unselected'}, {'id': 8, 'label': 'Yes', 'state':
+              'unselected'}, {'id': 9, 'label': 'Already shut off', 'state':
+              'unselected'}]}, {'text': 'In the last 12 months, have you or your
+              family had trouble getting transportation to medical
+              appointments?', 'choices': [{'id': 10, 'label': 'No', 'state':
+              'unselected'}, {'id': 11, 'label': 'Yes', 'state':
+              'unselected'}]}, {'text': 'What is your living situation today?',
+              'choices': [{'id': 12, 'label': 'I have a steady place to live.',
+              'state': 'unselected'}, {'id': 13, 'label': 'I have a place to
+              live today, but I am at risk of losing my housing.', 'state':
+              'unselected'}, {'id': 14, 'label': 'I am temporarily staying with
+              others, in a hotel, or a shelter.', 'state': 'unselected'}, {'id':
+              15, 'label': 'I am living outside, in a car, abandoned building,
+              or bus/train station.', 'state': 'unselected'}]}, {'text': 'Do you
+              have access to the internet at home? (Select all that apply)',
+              'choices': [{'id': 16, 'label': 'Yes, on a computer', 'state':
+              'unselected'}, {'id': 17, 'label': 'Yes, on my phone', 'state':
+              'unselected'}, {'id': 18, 'label': 'No', 'state': 'unselected'}]},
+              {'text': 'In the last 12 months, have you experienced violence at
+              home or in your relationships? [Ambulatory Only]', 'choices':
+              [{'id': 19, 'label': 'No', 'state': 'unselected'}, {'id': 20,
+              'label': 'Yes', 'state': 'unselected'}, {'id': 21, 'label':
+              'Prefer not to say', 'state': 'unselected'}]}, {'text': 'Would you
+              like a CHA care team member to reach out to help you with the
+              needs you checked off above?', 'choices': [{'id': 22, 'label':
+              'Yes', 'state': 'unselected'}, {'id': 23, 'label': 'No', 'state':
+              'unselected'}]}, {'text': 'Can we refer you to free or low-cost
+              community programs (like food pantries) by sharing your name,
+              phone, and address so they can reach you?', 'choices': [{'id': 24,
+              'label': 'Yes', 'state': 'unselected'}, {'id': 25, 'label': 'No',
+              'state': 'unselected'}]}, {'text': 'Declined the questionnaire?',
+              'choices': [{'id': 26, 'label': 'I do not want to answer these
+              questions.', 'state': 'unselected'}]}]}"
+          outgoingConnections:
+            - output->"Subgraph (Split / Max=24)"
+              qaEiBeBGUXAFQmHBNRE6x/example_output
+          visualData: 85.1801273589466/75.02891401571648/330/106/var(--node-color-2)/var(--node-color-2)
+        '[M9btDqHmRCNmXRag8OD47]:object "Object (Split / Max=24)"':
+          data:
+            jsonTemplate: |-
+              {
+                "example_id": "{{example_id}}",
+                "prediction": "{{prediction}}"
+              }
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - output->"Array" rEUeL8nPZ0et5Q_4j271R/input1
+          splitRunMax: 24
+          visualData: 1361.505083240636/919.4712124184169/341.1085663956442/102//
+        '[XNLlL-j_yCqt_xibKMmSV]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: 3wDYKd-IQNvtClNLnaGnh
+            inputData:
+              model_id:
+                type: string
+                value: ""
+              seed:
+                type: number
+                value: 20240128
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - example_id->"Object (Split / Max=24)"
+              M9btDqHmRCNmXRag8OD47/example_id
+            - prediction->"Object (Split / Max=24)"
+              M9btDqHmRCNmXRag8OD47/prediction
+          splitRunMax: 24
+          visualData: 757.8732229556351/870.5136908210345/447.11443484946267/103/var(--node-color-1)/var(--node-color-1)
+        '[alc-LwyS9vZWjYSv2M2Ly]:graphOutput "Graph Output"':
+          data:
+            dataType: object[]
+            id: results
+          visualData: 1693.9948225560972/267.46299040851966/330/100/var(--node-color-7)/var(--node-color-7)
+        '[kHlfWjAox0xcWBxhy8uL9]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: tBzVbqIp1-fWi2T7UKrrw
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - english_tagged_example_input->"Subgraph (Split / Max=24)"
+              qaEiBeBGUXAFQmHBNRE6x/example_input
+            - example_id->"Subgraph (Split / Max=24)"
+              XNLlL-j_yCqt_xibKMmSV/example_id
+            - scanned_input->"Subgraph (Split / Max=24)"
+              qaEiBeBGUXAFQmHBNRE6x/scanned_input
+          splitRunMax: 24
+          visualData: 9.090913911648698/402.9589550716141/495.1237222035234/88/var(--node-color-1)/var(--grey-darkish)
+        '[kIbldhIg0MNKpRujSNkXe]:subGraph "Subgraph"':
+          data:
+            graphId: 70bn-PjccM5TA0DNPxu1s
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - example_file_paths->"Subgraph (Split / Max=24)"
+              kHlfWjAox0xcWBxhy8uL9/file_path
+          visualData: 88.34807706629937/223.88859164447956/330/84/var(--node-color-1)/var(--grey-darkish)
+        '[qaEiBeBGUXAFQmHBNRE6x]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: jn1nyOBUnaIyk5oicrO-W
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - system_prompt->"Subgraph (Split / Max=24)"
+              XNLlL-j_yCqt_xibKMmSV/system_prompt
+            - user_prompt->"Subgraph (Split / Max=24)"
+              XNLlL-j_yCqt_xibKMmSV/user_prompt
+          splitRunMax: 24
+          visualData: 744.3318559310258/258.89974462905616/480.14671134546506/104/var(--node-color-1)/var(--node-color-1)
+        '[rEUeL8nPZ0et5Q_4j271R]:array "Array"':
+          data:
+            flatten: true
+            flattenDeep: false
+          outgoingConnections:
+            - output->"Graph Output" alc-LwyS9vZWjYSv2M2Ly/value
+          visualData: 1633.017382479244/647.0222079128811/230/101//
+        '[xbNT7oVUG1ykoaIhRtvg9]:text "GPT-3.5-Turbo-1106 Model ID"':
+          data:
+            text: gpt-3.5-turbo-1106
+          outgoingConnections:
+            - output->"Subgraph (Split / Max=24)" XNLlL-j_yCqt_xibKMmSV/model_id
+          visualData: 24.752200707627985/687.3784823095747/398.0773240663649/90/var(--node-color-2)/var(--node-color-2)
+    ZcowFswwRuFTYpc4nCiCs:
+      metadata:
+        description: ""
+        id: ZcowFswwRuFTYpc4nCiCs
+        name: "* Root Graph"
+      nodes:
+        '[4MrmEZ2T8ZF5l5PPpC_0x]:graphOutput "Graph Output"':
+          data:
+            dataType: object[]
+            id: results
+          visualData: 1693.9948225560972/267.46299040851966/330/100/var(--node-color-7)/var(--node-color-7)
+        '[5VQjPAod_jEdhw-RNINAZ]:array "Array"':
+          data:
+            flatten: true
+            flattenDeep: false
+          outgoingConnections:
+            - output->"Graph Output" 4MrmEZ2T8ZF5l5PPpC_0x/value
+          visualData: 1633.017382479244/647.0222079128811/230/101//
+        '[76UsbMnMlJ4Rg4v2x4x6O]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: 3wDYKd-IQNvtClNLnaGnh
+            inputData:
+              model_id:
+                type: string
+                value: ""
+              seed:
+                type: number
+                value: 20240128
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - example_id->"Object (Split / Max=24)"
+              9LTFpyiGO8CSYWkMI_gtt/example_id
+            - prediction->"Object (Split / Max=24)"
+              9LTFpyiGO8CSYWkMI_gtt/prediction
+          splitRunMax: 24
+          visualData: 757.8732229556351/870.5136908210345/447.11443484946267/103/var(--node-color-1)/var(--node-color-1)
+        '[9LTFpyiGO8CSYWkMI_gtt]:object "Object (Split / Max=24)"':
+          data:
+            jsonTemplate: |-
+              {
+                "example_id": "{{example_id}}",
+                "prediction": "{{prediction}}"
+              }
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - output->"Array" 5VQjPAod_jEdhw-RNINAZ/input1
+          splitRunMax: 24
+          visualData: 1361.505083240636/919.4712124184169/341.1085663956442/102//
+        '[CfBbOM7_KV5L40N2Yi6bw]:subGraph "Subgraph"':
+          data:
+            graphId: 70bn-PjccM5TA0DNPxu1s
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - example_file_paths->"Subgraph (Split / Max=24)"
+              Iskw76mn8oYUa2RVON_5k/file_path
+          visualData: 88.34807706629937/223.88859164447956/330/84/var(--node-color-1)/var(--grey-darkish)
+        '[GeyrhXY0Ns5cCQ76WP6cl]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: jn1nyOBUnaIyk5oicrO-W
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - system_prompt->"Subgraph (Split / Max=24)"
+              76UsbMnMlJ4Rg4v2x4x6O/system_prompt
+            - user_prompt->"Subgraph (Split / Max=24)"
+              76UsbMnMlJ4Rg4v2x4x6O/user_prompt
+          splitRunMax: 24
+          visualData: 744.3318559310258/258.89974462905616/480.14671134546506/104/var(--node-color-1)/var(--node-color-1)
+        '[Iskw76mn8oYUa2RVON_5k]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: tBzVbqIp1-fWi2T7UKrrw
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - example_id->"Subgraph (Split / Max=24)"
+              76UsbMnMlJ4Rg4v2x4x6O/example_id
+            - scanned_input->"Subgraph (Split / Max=24)"
+              GeyrhXY0Ns5cCQ76WP6cl/scanned_input
+            - tagged_example_input->"Subgraph (Split / Max=24)"
+              GeyrhXY0Ns5cCQ76WP6cl/example_input
+          splitRunMax: 24
+          visualData: 9.090913911648698/402.9589550716141/495.1237222035234/88/var(--node-color-1)/var(--grey-darkish)
+        '[Vy0om8KQ_y3_KrrDyqgfV]:text "GPT-3.5-Turbo-0125 Model ID"':
+          data:
+            text: gpt-3.5-turbo-0125
+          outgoingConnections:
+            - output->"Subgraph (Split / Max=24)" 76UsbMnMlJ4Rg4v2x4x6O/model_id
+          visualData: -166.06552345014313/895.674905099043/398.0773240663649/113/var(--node-color-2)/var(--node-color-2)
+        '[XozIUoJBsH9H573gFNuSH]:number "Seed"':
+          data:
+            round: false
+            roundTo: 0
+            value: 20240128
+          outgoingConnections:
+            - value->"Subgraph (Split / Max=24)" 76UsbMnMlJ4Rg4v2x4x6O/seed
+          visualData: 330.86543049541007/1176.4124072091129/230/107/var(--node-color-2)/var(--node-color-2)
+        '[b-8KIvGyZVp7ctFg6JdWk]:text "GPT-3.5-Turbo-1106 Model ID"':
+          data:
+            text: gpt-3.5-turbo-1106
+          visualData: -161.91731205540898/710.1936449806126/398.0773240663649/112/var(--node-color-2)/var(--node-color-2)
+        '[hS3f9qMAA8klAF9rCI47k]:text "GPT-4-0125-Preview Model ID"':
+          data:
+            text: gpt-4-0125-preview
+          visualData: -155.87717357878023/1053.5537709291664/395.1804166592856/110/var(--node-color-2)/var(--node-color-2)
+        '[j_PnMUPR_drtNJc7Z1WUI]:text "Default Example Output"':
+          data:
+            text: "{'title': 'CHA Social Needs Questionnaire', 'language': 'this must be the
+              original language in which the input was written (must be in
+              lowercase)', 'questions': [{'text': 'In the last 12 months, did
+              you worry your food would run out before you got money to buy
+              more?', 'choices': [{'id': 1, 'label': 'Never', 'state':
+              'unselected'}, {'id': 2, 'label': 'Sometimes', 'state':
+              'unselected'}, {'id': 3, 'label': 'Often', 'state':
+              'unselected'}]}, {'text': \"In the last 12 months, the food we
+              bought didn't last and we didn't have money to get more.\",
+              'choices': [{'id': 4, 'label': 'Never', 'state': 'unselected'},
+              {'id': 5, 'label': 'Sometimes', 'state': 'unselected'}, {'id': 6,
+              'label': 'Often', 'state': 'unselected'}]}, {'text': 'In the last
+              12 months, has the electric, gas or oil company threatened to shut
+              off services in your home?', 'choices': [{'id': 7, 'label': 'No',
+              'state': 'unselected'}, {'id': 8, 'label': 'Yes', 'state':
+              'unselected'}, {'id': 9, 'label': 'Already shut off', 'state':
+              'unselected'}]}, {'text': 'In the last 12 months, have you or your
+              family had trouble getting transportation to medical
+              appointments?', 'choices': [{'id': 10, 'label': 'No', 'state':
+              'unselected'}, {'id': 11, 'label': 'Yes', 'state':
+              'unselected'}]}, {'text': 'What is your living situation today?',
+              'choices': [{'id': 12, 'label': 'I have a steady place to live.',
+              'state': 'unselected'}, {'id': 13, 'label': 'I have a place to
+              live today, but I am at risk of losing my housing.', 'state':
+              'unselected'}, {'id': 14, 'label': 'I am temporarily staying with
+              others, in a hotel, or a shelter.', 'state': 'unselected'}, {'id':
+              15, 'label': 'I am living outside, in a car, abandoned building,
+              or bus/train station.', 'state': 'unselected'}]}, {'text': 'Do you
+              have access to the internet at home? (Select all that apply)',
+              'choices': [{'id': 16, 'label': 'Yes, on a computer', 'state':
+              'unselected'}, {'id': 17, 'label': 'Yes, on my phone', 'state':
+              'unselected'}, {'id': 18, 'label': 'No', 'state': 'unselected'}]},
+              {'text': 'In the last 12 months, have you experienced violence at
+              home or in your relationships? [Ambulatory Only]', 'choices':
+              [{'id': 19, 'label': 'No', 'state': 'unselected'}, {'id': 20,
+              'label': 'Yes', 'state': 'unselected'}, {'id': 21, 'label':
+              'Prefer not to say', 'state': 'unselected'}]}, {'text': 'Would you
+              like a CHA care team member to reach out to help you with the
+              needs you checked off above?', 'choices': [{'id': 22, 'label':
+              'Yes', 'state': 'unselected'}, {'id': 23, 'label': 'No', 'state':
+              'unselected'}]}, {'text': 'Can we refer you to free or low-cost
+              community programs (like food pantries) by sharing your name,
+              phone, and address so they can reach you?', 'choices': [{'id': 24,
+              'label': 'Yes', 'state': 'unselected'}, {'id': 25, 'label': 'No',
+              'state': 'unselected'}]}, {'text': 'Declined the questionnaire?',
+              'choices': [{'id': 26, 'label': 'I do not want to answer these
+              questions.', 'state': 'unselected'}]}]}"
+          outgoingConnections:
+            - output->"Subgraph (Split / Max=24)"
+              GeyrhXY0Ns5cCQ76WP6cl/example_output
+          visualData: 91.40244445104784/19.02806018680539/330/114/var(--node-color-2)/var(--node-color-2)
+    jn1nyOBUnaIyk5oicrO-W:
+      metadata:
+        description: ""
+        id: jn1nyOBUnaIyk5oicrO-W
+        name: Assemble System and User Prompts Graph [Variants]
+      nodes:
+        '[-pMOdoUliQkDJfhT-Pqt_]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            editor: string
+            id: example_input
+            text: ""
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"System Prompt Template" phzXuSczlcAy-glSfM8x-/example_input
+          visualData: -88.29955000770323/-280.1233090796192/330/77/var(--node-color-1)/var(--node-color-1)
+        '[1MSRb1B4yuClSdArGlQWR]:assembleMessage "Assemble User Message"':
+          data:
+            toolCallId: ""
+            type: user
+            useToolCallIdInput: false
+            useTypeInput: false
+          outgoingConnections:
+            - message->"Graph Output" im45wksMj6ydgHEHp_1I4/value
+          visualData: 1053.7770461843627/441.0740427856741/352.10774976393327/49//
+        '[3f4CBXJDCKUPj7a9KzEQI]:text "User Prompt Template"':
+          data:
+            text: |-
+              Input:
+              ####
+              {{scanned_input}}
+              ####
+          outgoingConnections:
+            - output->"Assemble User Message" 1MSRb1B4yuClSdArGlQWR/part1
+          variants:
+            - data:
+                text: |-
+                  Scanned Text (Input):
+                  ####
+                  {{scanned_text}}
+                  ####
+
+                  Blank Questionnaire Template (JSON):
+                  ####
+                  {{example_output}}
+                  ####
+              id: Hand Crafted vF
+            - data:
+                text: |-
+                  Input:
+                  ####
+                  {{scanned_input}}
+                  ####
+              id: Example Only vF
+          visualData: 550.5332314937516/311.41726867267107/330/69/var(--node-color-2)/var(--node-color-2)
+        '[5hbN274Y6vaWIusf6TADD]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            editor: string
+            id: example_output
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"System Prompt Template" phzXuSczlcAy-glSfM8x-/example_output
+          visualData: -63.41149566630368/-25.823576391165197/330/72/var(--node-color-1)/var(--node-color-1)
+        '[B0lYmaFH7RDoo-1k_gFYh]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            editor: string
+            id: scanned_input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"User Prompt Template" 3f4CBXJDCKUPj7a9KzEQI/scanned_input
+          visualData: -134.66732172983313/246.30703653407411/325.38235719513705/74/var(--node-color-1)/var(--node-color-1)
+        '[WDRanuQYABxTPLS2B5MbU]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: system_prompt
+          visualData: 1008.0940625091135/-165.15633974825246/330/64/var(--node-color-7)/var(--node-color-7)
+        '[im45wksMj6ydgHEHp_1I4]:graphOutput "Graph Output"':
+          data:
+            dataType: chat-message
+            id: user_prompt
+          visualData: 1159.9839885044012/136.1928230184157/330/48/var(--node-color-7)/var(--node-color-7)
+        '[phzXuSczlcAy-glSfM8x-]:text "System Prompt Template"':
+          data:
+            text: >-
+              You are a world class, polyglot and expert at reading text that
+              was extracted from scanned documents using OCR.
+
+
+              The User will give you an input that you must map to its output. You are provided an example of an input and its corresponding output below. 
+
+
+              Example Input:
+
+              ####
+
+              {{example_input}}
+
+              ####
+
+
+              Example Output:
+
+              ####
+
+              {{example_output}}
+
+              ####
+
+
+              Your final response must be in ```JSON``` that follows the same exact schema as the Example Output.
+          outgoingConnections:
+            - output->"Graph Output" WDRanuQYABxTPLS2B5MbU/value
+          variants:
+            - data:
+                text: >-
+                  You are a world class, polyglot and expert at reading text
+                  that was extracted from scanned documents using OCR.
+
+
+                  The User will give you an input that you must map to its output. You are provided an example of an input and its corresponding output below. 
+
+
+                  Example Input:
+
+                  ####
+
+                  {{example_input}}
+
+                  ####
+
+
+                  Example Output:
+
+                  ####
+
+                  {{example_output}}
+
+                  ####
+
+
+                  Your final response must be in ```JSON``` that follows the same exact schema as the Example Output.
+              id: Example Only vF
+            - data:
+                text: >-
+                  You are a world class, polyglot and expert at reading text
+                  that was extracted from scanned documents using OCR. You must
+                  show all of your work in order to successfully complete the
+                  tasks you are given.
+
+
+                  You are given scanned text that was extracted from a scanned filled out questionnaire, which will be referred to as your input. Before you proceed, you must carefully read the input and identify the language in which it was written.
+
+
+                  You are given JSON representing a blank questionnaire template, which will be referred to as the questionnaire template. Before you proceed, you must carefully read the template and identify the language in which it was written.
+
+
+                  Your final response must be in ```JSON``` that follows the specified structure. 
+
+
+                  Task #1: Using only the input, fill out the blank questionnaire template in English. You must specify which answers were selected or unselected.
+
+
+                  Task #2: Output the "final response" as JSON that follows this structure: { "result": { JSON representing the filled out questionnaire, make sure to set the language to the language you detected in the input }, "rationale": "summary of the tasks you completed and your rationale for your decision making" }.
+
+
+                  Task #3: If and only if you have completed every preceding task, you can print the stop token, which is "[FANETO]".
+              id: Hand Crafted vF
+          visualData: 565.4956717397887/-279.21873147764046/330/76/var(--node-color-2)/var(--node-color-2)
+    n0pJZmn-HlVB0PsaBZnk2:
+      metadata:
+        description: The “Example Only” prompt was used and the “Example Input” and
+          “Example Output” were in English.
+        id: n0pJZmn-HlVB0PsaBZnk2
+        name: "Runs/Run: GPT 3.5 Turbo 1106 - Example-based Prompt - 001"
+      nodes:
+        '[9PJv3DPnOLkzE97AsAMme]:array "Array"':
+          data:
+            flatten: true
+            flattenDeep: false
+          outgoingConnections:
+            - output->"Graph Output" _AQhS8ZT9D7FoonjEWMfn/value
+          visualData: 1633.017382479244/647.0222079128811/230/101//
+        '[Ag0hoKNkT7XC6PVlvvXHP]:subGraph "Subgraph"':
+          data:
+            graphId: 70bn-PjccM5TA0DNPxu1s
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - example_file_paths->"Subgraph (Split / Max=24)"
+              iVN6edwP5bOjRmpTBQhuD/file_path
+          visualData: 88.34807706629937/223.88859164447956/330/84/var(--node-color-1)/var(--grey-darkish)
+        '[Hfho2ByPn879CDxShNT__]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: 3wDYKd-IQNvtClNLnaGnh
+            inputData:
+              model_id:
+                type: string
+                value: ""
+              seed:
+                type: number
+                value: 20240128
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - example_id->"Object (Split / Max=24)"
+              R3x8nCAp8Rc8Zo3Emva5s/example_id
+            - prediction->"Object (Split / Max=24)"
+              R3x8nCAp8Rc8Zo3Emva5s/prediction
+          splitRunMax: 24
+          visualData: 757.8732229556351/870.5136908210345/447.11443484946267/103/var(--node-color-1)/var(--node-color-1)
+        '[R3x8nCAp8Rc8Zo3Emva5s]:object "Object (Split / Max=24)"':
+          data:
+            jsonTemplate: |-
+              {
+                "example_id": "{{example_id}}",
+                "prediction": "{{prediction}}"
+              }
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - output->"Array" 9PJv3DPnOLkzE97AsAMme/input1
+          splitRunMax: 24
+          visualData: 1361.505083240636/919.4712124184169/341.1085663956442/102//
+        '[V48Cda-SG9wuHCZjV64Zx]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: jn1nyOBUnaIyk5oicrO-W
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - system_prompt->"Subgraph (Split / Max=24)"
+              Hfho2ByPn879CDxShNT__/system_prompt
+            - user_prompt->"Subgraph (Split / Max=24)"
+              Hfho2ByPn879CDxShNT__/user_prompt
+          splitRunMax: 24
+          visualData: 744.3318559310258/258.89974462905616/480.14671134546506/104/var(--node-color-1)/var(--node-color-1)
+        '[_AQhS8ZT9D7FoonjEWMfn]:graphOutput "Graph Output"':
+          data:
+            dataType: object[]
+            id: results
+          visualData: 1693.9948225560972/267.46299040851966/330/100/var(--node-color-7)/var(--node-color-7)
+        '[dwZPi7q6rWcebythrqerw]:text "Default Example Output"':
+          data:
+            text: "{'title': 'CHA Social Needs Questionnaire', 'language': 'this must be the
+              original language in which the input was written (must be in
+              lowercase)', 'questions': [{'text': 'In the last 12 months, did
+              you worry your food would run out before you got money to buy
+              more?', 'choices': [{'id': 1, 'label': 'Never', 'state':
+              'unselected'}, {'id': 2, 'label': 'Sometimes', 'state':
+              'unselected'}, {'id': 3, 'label': 'Often', 'state':
+              'unselected'}]}, {'text': \"In the last 12 months, the food we
+              bought didn't last and we didn't have money to get more.\",
+              'choices': [{'id': 4, 'label': 'Never', 'state': 'unselected'},
+              {'id': 5, 'label': 'Sometimes', 'state': 'unselected'}, {'id': 6,
+              'label': 'Often', 'state': 'unselected'}]}, {'text': 'In the last
+              12 months, has the electric, gas or oil company threatened to shut
+              off services in your home?', 'choices': [{'id': 7, 'label': 'No',
+              'state': 'unselected'}, {'id': 8, 'label': 'Yes', 'state':
+              'unselected'}, {'id': 9, 'label': 'Already shut off', 'state':
+              'unselected'}]}, {'text': 'In the last 12 months, have you or your
+              family had trouble getting transportation to medical
+              appointments?', 'choices': [{'id': 10, 'label': 'No', 'state':
+              'unselected'}, {'id': 11, 'label': 'Yes', 'state':
+              'unselected'}]}, {'text': 'What is your living situation today?',
+              'choices': [{'id': 12, 'label': 'I have a steady place to live.',
+              'state': 'unselected'}, {'id': 13, 'label': 'I have a place to
+              live today, but I am at risk of losing my housing.', 'state':
+              'unselected'}, {'id': 14, 'label': 'I am temporarily staying with
+              others, in a hotel, or a shelter.', 'state': 'unselected'}, {'id':
+              15, 'label': 'I am living outside, in a car, abandoned building,
+              or bus/train station.', 'state': 'unselected'}]}, {'text': 'Do you
+              have access to the internet at home? (Select all that apply)',
+              'choices': [{'id': 16, 'label': 'Yes, on a computer', 'state':
+              'unselected'}, {'id': 17, 'label': 'Yes, on my phone', 'state':
+              'unselected'}, {'id': 18, 'label': 'No', 'state': 'unselected'}]},
+              {'text': 'In the last 12 months, have you experienced violence at
+              home or in your relationships? [Ambulatory Only]', 'choices':
+              [{'id': 19, 'label': 'No', 'state': 'unselected'}, {'id': 20,
+              'label': 'Yes', 'state': 'unselected'}, {'id': 21, 'label':
+              'Prefer not to say', 'state': 'unselected'}]}, {'text': 'Would you
+              like a CHA care team member to reach out to help you with the
+              needs you checked off above?', 'choices': [{'id': 22, 'label':
+              'Yes', 'state': 'unselected'}, {'id': 23, 'label': 'No', 'state':
+              'unselected'}]}, {'text': 'Can we refer you to free or low-cost
+              community programs (like food pantries) by sharing your name,
+              phone, and address so they can reach you?', 'choices': [{'id': 24,
+              'label': 'Yes', 'state': 'unselected'}, {'id': 25, 'label': 'No',
+              'state': 'unselected'}]}, {'text': 'Declined the questionnaire?',
+              'choices': [{'id': 26, 'label': 'I do not want to answer these
+              questions.', 'state': 'unselected'}]}]}"
+          outgoingConnections:
+            - output->"Subgraph (Split / Max=24)"
+              V48Cda-SG9wuHCZjV64Zx/example_output
+          visualData: 85.1801273589466/75.02891401571648/330/106/var(--node-color-2)/var(--node-color-2)
+        '[iVN6edwP5bOjRmpTBQhuD]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: tBzVbqIp1-fWi2T7UKrrw
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - english_tagged_example_input->"Subgraph (Split / Max=24)"
+              V48Cda-SG9wuHCZjV64Zx/example_input
+            - example_id->"Subgraph (Split / Max=24)"
+              Hfho2ByPn879CDxShNT__/example_id
+            - scanned_input->"Subgraph (Split / Max=24)"
+              V48Cda-SG9wuHCZjV64Zx/scanned_input
+          splitRunMax: 24
+          visualData: 9.090913911648698/402.9589550716141/495.1237222035234/88/var(--node-color-1)/var(--grey-darkish)
+        '[kdMlOAU8Y7wTUlPgr3dyp]:number "Seed"':
+          data:
+            round: false
+            roundTo: 0
+            value: 20240128
+          outgoingConnections:
+            - value->"Subgraph (Split / Max=24)" Hfho2ByPn879CDxShNT__/seed
+          visualData: 111.01022657449987/1033.2991140907845/230/53/var(--node-color-2)/var(--node-color-2)
+        '[ltJxizt2tEuju7RIAPaxU]:text "GPT-4-0125-Preview Model ID"':
+          data:
+            text: gpt-4-0125-preview
+          visualData: -4.467457670983592/862.7360467713952/395.1804166592856/91/var(--node-color-2)/var(--node-color-2)
+        '[tgk9rZh_3BJFQXn8NXuX-]:text "GPT-3.5-Turbo-1106 Model ID"':
+          data:
+            text: gpt-3.5-turbo-1106
+          outgoingConnections:
+            - output->"Subgraph (Split / Max=24)" Hfho2ByPn879CDxShNT__/model_id
+          visualData: 24.752200707627985/687.3784823095747/398.0773240663649/90/var(--node-color-2)/var(--node-color-2)
+    tBzVbqIp1-fWi2T7UKrrw:
+      metadata:
+        description: ""
+        id: tBzVbqIp1-fWi2T7UKrrw
+        name: Load Experiment Graph
+      nodes:
+        '[448BbZxo0f7PnKPFwBo0l]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: example_id
+          visualData: 912.8504620065681/634.1113825030144/330/49/var(--node-color-7)/var(--node-color-7)
+        '[AZ5C1qFJ70yC7kLjV1Ovc]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: example_input
+          visualData: 1163.7470098093124/-132.25459923167472/330/62/var(--node-color-7)/var(--node-color-7)
+        '[BDmfA4_bvgKe7MKTpRiIK]:extractJson "Extract JSON"':
+          outgoingConnections:
+            - output->"Destructure" jM7FRu9mTSXDZ0U-feKtS/object
+          visualData: 670.5072056061902/-139.38234206698004/280/71//
+        '[BeOtSd78lEDsq5wrIGfkH]:extractRegex "Extract Example ID Using Regex"':
+          data:
+            errorOnFailed: false
+            regex: ([^/\\]+)(?=\.[^.]+$)
+            useRegexInput: false
+          outgoingConnections:
+            - output1->"Graph Output" 448BbZxo0f7PnKPFwBo0l/value
+          visualData: -305.9935628306277/254.0690624418691/428.2570509743489/39//
+        '[_7_E6VHcyCB6kYpNqguxl]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: english_example_input
+          visualData: 1179.428044046984/159.4037096716856/330/64/var(--node-color-7)/var(--node-color-7)
+        '[bSutiqhdsXTkkKfFiJBiW]:readFile "Read File"':
+          data:
+            asBinary: false
+            errorOnMissingFile: true
+            path: ""
+            usePathInput: true
+          outgoingConnections:
+            - content->"Extract JSON" BDmfA4_bvgKe7MKTpRiIK/input
+          visualData: 205.77837274428867/-143.65898776816306/280/73//
+        '[bWpNnuBBSMfMx65A3eTol]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: file_path
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Extract Example ID Using Regex" BeOtSd78lEDsq5wrIGfkH/input
+            - data->"Read File" bSutiqhdsXTkkKfFiJBiW/path
+          visualData: -280.8583978940535/-84.14421542112092/441.63696732210985/32/var(--node-color-1)/var(--node-color-1)
+        '[ghfrZ4pa531N6ZXybcehU]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: tagged_example_input
+          visualData: 1093.8951300233211/479.57298991626703/330/66/var(--node-color-7)/var(--node-color-7)
+        '[jM7FRu9mTSXDZ0U-feKtS]:destructure "Destructure"':
+          data:
+            paths:
+              - $.example_input
+              - $.scanned_input
+              - $.english_example_input
+              - $.english_tagged_example_input
+              - $.tagged_example_input
+          outgoingConnections:
+            - match_0->"Graph Output" AZ5C1qFJ70yC7kLjV1Ovc/value
+            - match_1->"Graph Output" pN-ZcHAJZE0sL7x0ojniu/value
+            - match_2->"Graph Output" _7_E6VHcyCB6kYpNqguxl/value
+            - match_3->"Graph Output" s_qLTdGiTcHoGxpgTyWai/value
+            - match_4->"Graph Output" ghfrZ4pa531N6ZXybcehU/value
+          visualData: 416.7595606693237/159.98285701583998/280/67//
+        '[pN-ZcHAJZE0sL7x0ojniu]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: scanned_input
+          visualData: 1130.9593927669084/15.00010378706645/330/63/var(--node-color-7)/var(--node-color-7)
+        '[s_qLTdGiTcHoGxpgTyWai]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: english_tagged_example_input
+          visualData: 1197.9601754187777/306.65841269042687/330/65/var(--node-color-7)/var(--node-color-7)
+    y2k_lTdxbdaH1qt44b4hS:
+      metadata:
+        description: This used the “Hand Crafted” prompt.
+        id: y2k_lTdxbdaH1qt44b4hS
+        name: "Runs/Run: GPT 4 0125 - Hand Crafted Prompt - 001"
+      nodes:
+        '[Cft8vAD3neBgfUfi4IQv6]:text "Default Example Output"':
+          data:
+            text: "{'title': 'CHA Social Needs Questionnaire', 'language': 'this must be the
+              original language in which the input was written (must be in
+              lowercase)', 'questions': [{'text': 'In the last 12 months, did
+              you worry your food would run out before you got money to buy
+              more?', 'choices': [{'id': 1, 'label': 'Never', 'state':
+              'unselected'}, {'id': 2, 'label': 'Sometimes', 'state':
+              'unselected'}, {'id': 3, 'label': 'Often', 'state':
+              'unselected'}]}, {'text': \"In the last 12 months, the food we
+              bought didn't last and we didn't have money to get more.\",
+              'choices': [{'id': 4, 'label': 'Never', 'state': 'unselected'},
+              {'id': 5, 'label': 'Sometimes', 'state': 'unselected'}, {'id': 6,
+              'label': 'Often', 'state': 'unselected'}]}, {'text': 'In the last
+              12 months, has the electric, gas or oil company threatened to shut
+              off services in your home?', 'choices': [{'id': 7, 'label': 'No',
+              'state': 'unselected'}, {'id': 8, 'label': 'Yes', 'state':
+              'unselected'}, {'id': 9, 'label': 'Already shut off', 'state':
+              'unselected'}]}, {'text': 'In the last 12 months, have you or your
+              family had trouble getting transportation to medical
+              appointments?', 'choices': [{'id': 10, 'label': 'No', 'state':
+              'unselected'}, {'id': 11, 'label': 'Yes', 'state':
+              'unselected'}]}, {'text': 'What is your living situation today?',
+              'choices': [{'id': 12, 'label': 'I have a steady place to live.',
+              'state': 'unselected'}, {'id': 13, 'label': 'I have a place to
+              live today, but I am at risk of losing my housing.', 'state':
+              'unselected'}, {'id': 14, 'label': 'I am temporarily staying with
+              others, in a hotel, or a shelter.', 'state': 'unselected'}, {'id':
+              15, 'label': 'I am living outside, in a car, abandoned building,
+              or bus/train station.', 'state': 'unselected'}]}, {'text': 'Do you
+              have access to the internet at home? (Select all that apply)',
+              'choices': [{'id': 16, 'label': 'Yes, on a computer', 'state':
+              'unselected'}, {'id': 17, 'label': 'Yes, on my phone', 'state':
+              'unselected'}, {'id': 18, 'label': 'No', 'state': 'unselected'}]},
+              {'text': 'In the last 12 months, have you experienced violence at
+              home or in your relationships? [Ambulatory Only]', 'choices':
+              [{'id': 19, 'label': 'No', 'state': 'unselected'}, {'id': 20,
+              'label': 'Yes', 'state': 'unselected'}, {'id': 21, 'label':
+              'Prefer not to say', 'state': 'unselected'}]}, {'text': 'Would you
+              like a CHA care team member to reach out to help you with the
+              needs you checked off above?', 'choices': [{'id': 22, 'label':
+              'Yes', 'state': 'unselected'}, {'id': 23, 'label': 'No', 'state':
+              'unselected'}]}, {'text': 'Can we refer you to free or low-cost
+              community programs (like food pantries) by sharing your name,
+              phone, and address so they can reach you?', 'choices': [{'id': 24,
+              'label': 'Yes', 'state': 'unselected'}, {'id': 25, 'label': 'No',
+              'state': 'unselected'}]}, {'text': 'Declined the questionnaire?',
+              'choices': [{'id': 26, 'label': 'I do not want to answer these
+              questions.', 'state': 'unselected'}]}]}"
+          outgoingConnections:
+            - output->"Subgraph (Split / Max=24)"
+              M7WHUH1_NklgVibrBkcOm/example_output
+          visualData: 85.1801273589466/75.02891401571648/330/106/var(--node-color-2)/var(--node-color-2)
+        '[FFJkPz_CUr7a6BeTW6GTl]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: 3wDYKd-IQNvtClNLnaGnh
+            inputData:
+              model_id:
+                type: string
+                value: ""
+              seed:
+                type: number
+                value: 20240128
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - example_id->"Object (Split / Max=24)"
+              rw0M1AA8mdTy4x7Smld6X/example_id
+            - prediction->"Object (Split / Max=24)"
+              rw0M1AA8mdTy4x7Smld6X/prediction
+          splitRunMax: 24
+          visualData: 757.8732229556351/870.5136908210345/447.11443484946267/103/var(--node-color-1)/var(--node-color-1)
+        '[Fbeo9YQWtmxCEuATQe1JQ]:graphOutput "Graph Output"':
+          data:
+            dataType: object[]
+            id: results
+          visualData: 1693.9948225560972/267.46299040851966/330/100/var(--node-color-7)/var(--node-color-7)
+        '[M7WHUH1_NklgVibrBkcOm]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: jn1nyOBUnaIyk5oicrO-W
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - system_prompt->"Subgraph (Split / Max=24)"
+              FFJkPz_CUr7a6BeTW6GTl/system_prompt
+            - user_prompt->"Subgraph (Split / Max=24)"
+              FFJkPz_CUr7a6BeTW6GTl/user_prompt
+          splitRunMax: 24
+          visualData: 744.3318559310258/258.89974462905616/480.14671134546506/104/var(--node-color-1)/var(--node-color-1)
+        '[P5ywE7EnLvW1SgqNK4afc]:text "GPT-4-0125-Preview Model ID"':
+          data:
+            text: gpt-4-0125-preview
+          outgoingConnections:
+            - output->"Subgraph (Split / Max=24)" FFJkPz_CUr7a6BeTW6GTl/model_id
+          visualData: -4.467457670983592/862.7360467713952/395.1804166592856/91/var(--node-color-2)/var(--node-color-2)
+        '[_FLTC1uxZV96fERY4Qpzz]:subGraph "Subgraph (Split / Max=24)"':
+          data:
+            graphId: tBzVbqIp1-fWi2T7UKrrw
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - english_tagged_example_input->"Subgraph (Split / Max=24)"
+              M7WHUH1_NklgVibrBkcOm/example_input
+            - example_id->"Subgraph (Split / Max=24)"
+              FFJkPz_CUr7a6BeTW6GTl/example_id
+            - scanned_input->"Subgraph (Split / Max=24)"
+              M7WHUH1_NklgVibrBkcOm/scanned_input
+          splitRunMax: 24
+          visualData: 9.090913911648698/402.9589550716141/495.1237222035234/88/var(--node-color-1)/var(--grey-darkish)
+        '[iW6mYqQKtJi5LGNmbQZnM]:subGraph "Subgraph"':
+          data:
+            graphId: 70bn-PjccM5TA0DNPxu1s
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - example_file_paths->"Subgraph (Split / Max=24)"
+              _FLTC1uxZV96fERY4Qpzz/file_path
+          visualData: 88.34807706629937/223.88859164447956/330/84/var(--node-color-1)/var(--grey-darkish)
+        '[r4ZnzRSUvEzY58ejdzxkm]:array "Array"':
+          data:
+            flatten: true
+            flattenDeep: false
+          outgoingConnections:
+            - output->"Graph Output" Fbeo9YQWtmxCEuATQe1JQ/value
+          visualData: 1633.017382479244/647.0222079128811/230/101//
+        '[rw0M1AA8mdTy4x7Smld6X]:object "Object (Split / Max=24)"':
+          data:
+            jsonTemplate: |-
+              {
+                "example_id": "{{example_id}}",
+                "prediction": "{{prediction}}"
+              }
+          isSplitRun: true
+          isSplitSequential: true
+          outgoingConnections:
+            - output->"Array" r4ZnzRSUvEzY58ejdzxkm/input1
+          splitRunMax: 24
+          visualData: 1361.505083240636/919.4712124184169/341.1085663956442/102//
+        '[ulU9W6KReC0s76rWa-bdd]:text "GPT-3.5-Turbo-1106 Model ID"':
+          data:
+            text: gpt-3.5-turbo-1106
+          visualData: 24.752200707627985/687.3784823095747/398.0773240663649/90/var(--node-color-2)/var(--node-color-2)
+        '[vm6K0EUxnk8H1TVoC1_zL]:number "Seed"':
+          data:
+            round: false
+            roundTo: 0
+            value: 20240128
+          outgoingConnections:
+            - value->"Subgraph (Split / Max=24)" FFJkPz_CUr7a6BeTW6GTl/seed
+          visualData: 111.01022657449987/1033.2991140907845/230/53/var(--node-color-2)/var(--node-color-2)
+  metadata:
+    description: ""
+    id: yLv53sgzpLDpjtUii1FUI
+    mainGraphId: ZcowFswwRuFTYpc4nCiCs
+    title: Project Papyrus Graphs
+  plugins: []

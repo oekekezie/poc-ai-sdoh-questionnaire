@@ -1,0 +1,17 @@
+# Secrets
+.env
+
+# Dataset
+questionnaires
+*.pdf
+
+# Jupyter
+__pycache__
+*.pyc
+.ipynb_checkpoints
+
+# OS
+.DS_Store
+
+# VS Code
+.vscode/

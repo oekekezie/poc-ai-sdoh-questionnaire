@@ -1,0 +1,14 @@
+{
+    "requestTokens": {
+        "type": "number",
+        "value": 1850
+    },
+    "responseTokens": {
+        "type": "number",
+        "value": 2147
+    },
+    "duration": {
+        "type": "number",
+        "value": 60334
+    }
+}
